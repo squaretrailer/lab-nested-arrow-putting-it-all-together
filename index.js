@@ -30,8 +30,10 @@ function createLoginTracker(userInfo) {
     };
 }
 
-console.log(createLoginTracker({ username: "user1", password: "pass123" })("wrongpass")); // Login attempt 1 failed.
 
+console.log(createLoginTracker({ username: "user1", password: "pass123" })("wrongpass")); // Login attempt 1 failed.
+console.log(createLoginTracker({ username: "user1", password: "pass123" })("wrongpass")); // Login attempt 1 failed.
+console.log(createLoginTracker({ username: "user1", password: "pass123" })("wrongpass"));
 
 module.exports = {
   ...(typeof createLoginTracker !== 'undefined' && { createLoginTracker })
